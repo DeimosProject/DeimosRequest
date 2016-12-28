@@ -65,6 +65,7 @@ trait Router
         if (!$this->route)
         {
             $path = $this->server('request_uri', '/');
+            $this->router->setMethod($this->method());
 
             $this->route = $this->router->getCurrentRoute($path);
         }
