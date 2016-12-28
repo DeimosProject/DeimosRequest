@@ -7,12 +7,13 @@ namespace Deimos\Request\Adapter;
  *
  * @package Deimos\Request\Adapter
  *
- * @method attributeInt(string $path = null, mixed $default = null)
- * @method attributeFloat(string $path = null, mixed $default = null)
- * @method attributeBool(string $path = null, mixed $default = null)
- * @method attributeEmail(string $path = null, mixed $default = null)
- * @method attributeIP(string $path = null, mixed $default = null)
- * @method attributeURL(string $path = null, mixed $default = null)
+ * @method int attributeInt(string $path = null, mixed $default = null)
+ * @method float attributeFloat(string $path = null, mixed $default = null)
+ * @method bool attributeBool(string $path = null, mixed $default = null)
+ * @method string attributeEmail(string $path = null, mixed $default = null)
+ * @method string attributeIP(string $path = null, mixed $default = null)
+ * @method string attributeURL(string $path = null, mixed $default = null)
+ * @method mixed attributeUnsafe(string $path = null, mixed $default = null)
  */
 trait Router
 {

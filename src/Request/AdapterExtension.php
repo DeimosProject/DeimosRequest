@@ -62,6 +62,14 @@ trait AdapterExtension
             throw new \BadFunctionCallException('Not found' . $name);
         }
 
+        if ($filter === 'unsafe')
+        {
+            $arguments[1] = isset($arguments[1]) ? $arguments[1] : null;
+            $arguments[2] = false;
+
+            return call_user_func_array([$this, $call], $arguments);
+        }
+
         return $this->filterVariable(
             call_user_func_array([$this, $call], $arguments),
             static::$filters[$filter],

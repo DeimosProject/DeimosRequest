@@ -7,26 +7,29 @@ namespace Deimos\Request\Adapter;
  *
  * @package Deimos\put\Adapter
  *
- * @method mixed putInt(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed putFloat(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed putBool(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed putEmail(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed putIP(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed putURL(string $path = null, mixed $default = null, bool $strip = true)
+ * @method int putInt(string $path = null, mixed $default = null, bool $strip = true)
+ * @method float putFloat(string $path = null, mixed $default = null, bool $strip = true)
+ * @method bool putBool(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string putEmail(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string putIP(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string putURL(string $path = null, mixed $default = null, bool $strip = true)
+ * @method mixed putUnsafe(string $path = null, mixed $default = null)
  *
- * @method mixed patchInt(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed patchFloat(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed patchBool(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed patchEmail(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed patchIP(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed patchURL(string $path = null, mixed $default = null, bool $strip = true)
+ * @method int patchInt(string $path = null, mixed $default = null, bool $strip = true)
+ * @method float patchFloat(string $path = null, mixed $default = null, bool $strip = true)
+ * @method bool patchBool(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string patchEmail(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string patchIP(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string patchURL(string $path = null, mixed $default = null, bool $strip = true)
+ * @method mixed pathUnsafe(string $path = null, mixed $default = null)
  *
- * @method mixed deleteInt(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed deleteFloat(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed deleteBool(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed deleteEmail(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed deleteIP(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed deleteURL(string $path = null, mixed $default = null, bool $strip = true)
+ * @method int deleteInt(string $path = null, mixed $default = null, bool $strip = true)
+ * @method float deleteFloat(string $path = null, mixed $default = null, bool $strip = true)
+ * @method bool deleteBool(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string deleteEmail(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string deleteIP(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string deleteURL(string $path = null, mixed $default = null, bool $strip = true)
+ * @method mixed deleteUnsafe(string $path = null, mixed $default = null)
  */
 trait Other
 {

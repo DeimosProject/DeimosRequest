@@ -7,19 +7,21 @@ namespace Deimos\Request\Adapter;
  *
  * @package Deimos\query\Adapter
  *
- * @method mixed queryInt(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed queryFloat(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed queryBool(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed queryEmail(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed queryIP(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed queryURL(string $path = null, mixed $default = null, bool $strip = true)
+ * @method int queryInt(string $path = null, mixed $default = null, bool $strip = true)
+ * @method float queryFloat(string $path = null, mixed $default = null, bool $strip = true)
+ * @method bool queryBool(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string queryEmail(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string queryIP(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string queryURL(string $path = null, mixed $default = null, bool $strip = true)
+ * @method mixed queryUnsafe(string $path = null, mixed $default = null)
  *
- * @method mixed getInt(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed getFloat(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed getBool(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed getEmail(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed getIP(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed getURL(string $path = null, mixed $default = null, bool $strip = true)
+ * @method int getInt(string $path = null, mixed $default = null, bool $strip = true)
+ * @method float getFloat(string $path = null, mixed $default = null, bool $strip = true)
+ * @method bool getBool(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string getEmail(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string getIP(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string getURL(string $path = null, mixed $default = null, bool $strip = true)
+ * @method mixed getUnsafe(string $path = null, mixed $default = null)
  */
 trait Query
 {

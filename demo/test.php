@@ -6,4 +6,4 @@ $builder = new \Deimos\Builder\Builder();
 $helper  = new \Deimos\Helper\Helper($builder);
 $request = new \Deimos\Request\Request($helper);
 
-var_dump($request->query('id'));
+var_dump($request->queryUnsafe('id'));

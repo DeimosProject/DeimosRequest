@@ -7,19 +7,21 @@ namespace Deimos\Request\Adapter;
  *
  * @package Deimos\data\Adapter
  *
- * @method mixed dataInt(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed dataFloat(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed dataBool(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed dataEmail(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed dataIP(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed dataURL(string $path = null, mixed $default = null, bool $strip = true)
+ * @method int dataInt(string $path = null, mixed $default = null, bool $strip = true)
+ * @method float dataFloat(string $path = null, mixed $default = null, bool $strip = true)
+ * @method bool dataBool(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string dataEmail(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string dataIP(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string dataURL(string $path = null, mixed $default = null, bool $strip = true)
+ * @method mixed dataUnsafe(string $path = null, mixed $default = null)
  *
- * @method mixed postInt(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed postFloat(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed postBool(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed postEmail(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed postIP(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed postURL(string $path = null, mixed $default = null, bool $strip = true)
+ * @method int postInt(string $path = null, mixed $default = null, bool $strip = true)
+ * @method float postFloat(string $path = null, mixed $default = null, bool $strip = true)
+ * @method bool postBool(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string postEmail(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string postIP(string $path = null, mixed $default = null, bool $strip = true)
+ * @method string postURL(string $path = null, mixed $default = null, bool $strip = true)
+ * @method mixed postUnsafe(string $path = null, mixed $default = null)
  */
 trait Data
 {
