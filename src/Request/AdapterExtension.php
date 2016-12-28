@@ -8,14 +8,14 @@ trait AdapterExtension
     use DefaultAdapter;
 
     private static $allowMethods = [
-        'attributes' => true,
-        'get'        => true,
-        'query'      => true,
-        'post'       => true,
-        'data'       => true,
-        'put'        => true,
-        'patch'      => true,
-        'delete'     => true,
+        'attribute' => true,
+        'get'       => true,
+        'query'     => true,
+        'post'      => true,
+        'data'      => true,
+        'put'       => true,
+        'patch'     => true,
+        'delete'    => true,
     ];
 
     /**
