@@ -57,8 +57,6 @@ trait AdapterExtension
         $parameters = $this->normalizeLow($parameters);
         list ($call, $filter) = explode('_', $parameters);
 
-        $call = $call === 'attribute' ? 'attributes' : $call;
-
         if (empty(static::$allowMethods[$call]))
         {
             throw new \BadFunctionCallException('Not found' . $name);
