@@ -5,6 +5,9 @@ namespace Deimos\Request\Adapter;
 trait Server
 {
 
+    /**
+     * @var array
+     */
     private $serverData;
 
     /**
@@ -20,6 +23,9 @@ trait Server
         return $this->arrGet($this->serverData(), $path, $default);
     }
 
+    /**
+     * @return array
+     */
     private function serverData()
     {
         if (!$this->serverData)

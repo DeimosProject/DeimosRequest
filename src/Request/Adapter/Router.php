@@ -18,8 +18,6 @@ namespace Deimos\Request\Adapter;
 trait Router
 {
 
-    use Server;
-
     /**
      * @var \Deimos\Router\Router
      */

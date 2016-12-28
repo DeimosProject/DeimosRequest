@@ -6,6 +6,7 @@ trait RequestExtension
 {
 
     use Adapter\Request;
+    use Adapter\Server;
     use Adapter\Router;
     use Adapter\Query;
     use Adapter\Other;
