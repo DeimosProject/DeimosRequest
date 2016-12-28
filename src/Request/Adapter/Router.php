@@ -54,7 +54,7 @@ trait Router
      */
     public function attributes()
     {
-        return $this->route()->attribute();
+        return $this->route()->attributes();
     }
 
     /**
