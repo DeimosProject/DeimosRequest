@@ -2,7 +2,7 @@
 
     <testsuites>
         <testsuite name="Request">
-            <directory>tests/Test/Request</directory>
+            <directory>tests/Test</directory>
         </testsuite>
     </testsuites>
 

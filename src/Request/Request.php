@@ -14,8 +14,6 @@ class Request
      * Request constructor.
      *
      * @param Helper $helper
-     *
-     * @throws \InvalidArgumentException
      */
     public function __construct(Helper $helper)
     {

@@ -1,8 +1,10 @@
 <?php
 
-namespace Test\Request;
+namespace Test;
 
-class RequestTest extends \PHPUnit_Framework_TestCase
+use DeimosTest\TestSetUp;
+
+class RequestTest extends TestSetUp
 {
 
     public function testEntity()
