@@ -8,10 +8,12 @@
     }
   ],
   "require": {
-    "deimos/helper": "~0.1"
+    "deimos/helper": "~0.2"
   },
   "require-dev": {
-    "deimos/router": "^0.0"
+    "deimos/router": "^0.0",
+    "phpunit/phpunit": "~5.7",
+    "codeclimate/php-test-reporter": "dev-master"
   },
   "autoload": {
     "psr-4": {

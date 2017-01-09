@@ -2,6 +2,8 @@
 
 namespace Deimos\Request;
 
+use Deimos\Helper\Helper;
+
 class Request
 {
 
@@ -11,17 +13,12 @@ class Request
     /**
      * Request constructor.
      *
-     * @param \Deimos\Helper\Helper $helper
+     * @param Helper $helper
      *
      * @throws \InvalidArgumentException
      */
-    public function __construct($helper)
+    public function __construct(Helper $helper)
     {
-        if (!($helper instanceof \Deimos\Helper\Helper))
-        {
-            throw new \InvalidArgumentException('Helper not found!');
-        }
-
         $this->helper = $helper;
     }
 
