@@ -123,7 +123,7 @@ trait DefaultAdapter
     {
         $data = $this->arrGet($storage, $path, $default);
 
-        if (!empty($data) && $xss)
+        if ($xss && !empty($data))
         {
             $data = $this->xss($data);
         }
