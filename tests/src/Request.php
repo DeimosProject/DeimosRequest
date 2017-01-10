@@ -10,17 +10,17 @@ class Request extends \Deimos\Request\Request
         switch ($type)
         {
             case INPUT_GET:
-                return $_GET;
+                return array_merge($_GET, parent::inputArray($type));
             case INPUT_POST:
-                return $_POST;
+                return array_merge($_POST, parent::inputArray($type));
             case INPUT_SERVER:
-                return $_SERVER;
+                return array_merge($_SERVER, parent::inputArray($type));
         }
     }
 
     protected function getInput()
     {
-        return $_REQUEST;
+        return array_merge($_REQUEST, parent::getInput());
     }
 
 }

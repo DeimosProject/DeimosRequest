@@ -39,6 +39,9 @@ class TestSetUp extends \PHPUnit_Framework_TestCase
             $_SERVER['REQUEST_URI'] = $annotation['method']['urlPath'][0];
         }
 
+        $_POST['postArray'] = array('a' => 'testA', 'b' => 'testB');
+        $_POST['postUnsafe'] = '<foo>postBar</foo>';
+
         $builder = new Builder();
         $this->helper = new Helper($builder);
 
