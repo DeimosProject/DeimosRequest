@@ -20,7 +20,7 @@ class RequestTest extends TestSetUp
     }
 
     /**
-     * @ajax
+     * @ajax true
      */
     public function testIsAjax()
     {
