@@ -22,18 +22,32 @@ trait RequestExtension
     public function url($withParams = false)
     {
         $url = $this->isHttps() ? 'https://' : 'http://';
-        $url .= $this->server('http_host') . $this->server('request_uri');
+        $url .= $this->server('http_host');
+
+        return $url . $this->urlPath($withParams);
+    }
+
+    /**
+     * without host & schema
+     *
+     * @param bool $withParams
+     *
+     * @return mixed|string
+     */
+    public function urlPath($withParams = false)
+    {
+        $path = $this->server('request_uri');
 
         if (!$withParams)
         {
-            $position = mb_strpos($url, '?');
+            $position = mb_strpos($path, '?');
             if ($position !== false)
             {
-                $url = mb_substr($url, 0, $position);
+                $path = mb_substr($path, 0, $position);
             }
         }
 
-        return $url;
+        return $path;
     }
 
     /**
@@ -74,7 +88,7 @@ trait RequestExtension
      * @param array     $data
      * @param int|array $options
      */
-    public function sendJson(array $data = array(), $options = JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
+    public function json(array $data = array(), $options = JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
     {
 
         if (!headers_sent())
@@ -86,6 +100,8 @@ trait RequestExtension
 
         if (is_array($options))
         {
+            $this->helper->json()->reset();
+
             foreach ($options as $option)
             {
                 $this->helper->json()->addOption($option);
@@ -96,8 +112,7 @@ trait RequestExtension
             $this->helper->json()->setOption($options);
         }
 
-        echo $this->helper->json()->encode($data);
-        die;
+        return $this->helper->json()->encode($data);
 
     }
 

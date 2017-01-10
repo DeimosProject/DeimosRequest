@@ -62,6 +62,11 @@ trait DefaultAdapter
      */
     protected function normalizeUpp($string)
     {
+        if(null === $string) {
+
+            return null;
+        }
+
         return strtoupper($string);
     }
 
@@ -72,6 +77,11 @@ trait DefaultAdapter
      */
     protected function normalizeLow($string)
     {
+        if(null === $string) {
+
+            return null;
+        }
+
         return strtolower($string);
     }
 

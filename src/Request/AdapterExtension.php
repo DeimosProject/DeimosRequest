@@ -7,7 +7,7 @@ trait AdapterExtension
 
     use DefaultAdapter;
 
-    private static $allowMethods = [
+    private $allowMethods = [
         'attribute' => true,
         'get'       => true,
         'query'     => true,
@@ -21,7 +21,7 @@ trait AdapterExtension
     /**
      * @var array
      */
-    private static $filters = [
+    private $filters = [
         'int'   => FILTER_VALIDATE_INT,
         'float' => FILTER_VALIDATE_FLOAT,
         'bool'  => FILTER_VALIDATE_BOOLEAN,
@@ -33,7 +33,7 @@ trait AdapterExtension
     /**
      * @var array
      */
-    private static $defaults = [
+    private $defaults = [
         'int'   => 0,
         'float' => .0,
         'bool'  => false,
@@ -57,7 +57,7 @@ trait AdapterExtension
         $parameters = $this->normalizeLow($parameters);
         list ($call, $filter) = explode('_', $parameters);
 
-        if (empty(static::$allowMethods[$call]))
+        if (empty($this->allowMethods[$call]))
         {
             throw new \BadFunctionCallException('Not found' . $name);
         }
@@ -72,8 +72,8 @@ trait AdapterExtension
 
         return $this->filterVariable(
             call_user_func_array([$this, $call], $arguments),
-            static::$filters[$filter],
-            static::$defaults[$filter]
+            $this->filters[$filter],
+            $this->defaults[$filter]
         );
     }
 

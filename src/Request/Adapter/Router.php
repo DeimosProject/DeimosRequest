@@ -7,13 +7,13 @@ namespace Deimos\Request\Adapter;
  *
  * @package Deimos\Request\Adapter
  *
- * @method int attributeInt(string $path = null, mixed $default = null)
- * @method float attributeFloat(string $path = null, mixed $default = null)
- * @method bool attributeBool(string $path = null, mixed $default = null)
- * @method string attributeEmail(string $path = null, mixed $default = null)
- * @method string attributeIP(string $path = null, mixed $default = null)
- * @method string attributeURL(string $path = null, mixed $default = null)
- * @method mixed attributeUnsafe(string $path = null, mixed $default = null)
+ * @method int attributeInt(string $path = null, mixed $default = 0)
+ * @method float attributeFloat(string $path = null, mixed $default = 0.0)
+ * @method bool attributeBool(string $path = null, mixed $default = false)
+ * @method string attributeEmail(string $path = null, mixed $default = '')
+ * @method string attributeIP(string $path = null, mixed $default = '')
+ * @method string attributeURL(string $path = null, mixed $default = '')
+ * @method mixed attributeUnsafe(string $path = null, mixed $default = '')
  */
 trait Router
 {
@@ -64,7 +64,7 @@ trait Router
     {
         if (!$this->route)
         {
-            $path = $this->server('request_uri', '/');
+            $path = $this->urlPath();
             $this->router->setMethod($this->method());
 
             $this->route = $this->router->getCurrentRoute($path);

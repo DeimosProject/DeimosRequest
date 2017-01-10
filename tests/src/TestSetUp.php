@@ -13,16 +13,44 @@ class TestSetUp extends \PHPUnit_Framework_TestCase
      */
     protected $helper;
 
-    public function getConfig()
+    /**
+     * @var Request
+     */
+    protected $request;
+
+    protected function getConfig()
     {
-        return __DIR__ . '/config.php';
+        return require __DIR__ . '/config.php';
     }
 
     public function setUp()
     {
 
+        $annotation = $this->getAnnotations();
+
+        $_SERVER['HTTP_X_REQUESTED_WITH'] = null;
+        if (isset($annotation['method']['ajax'][0]))
+        {
+            $_SERVER['HTTP_X_REQUESTED_WITH'] = 'xmlhttprequest';
+        }
+
+        if (isset($annotation['method']['urlPath'][0]))
+        {
+            $_SERVER['REQUEST_URI'] = $annotation['method']['urlPath'][0];
+        }
+
         $builder = new Builder();
         $this->helper = new Helper($builder);
+
+        $this->request = new \DeimosTest\Request($this->helper);
+
+        $config = $this->getConfig();
+
+        $router = new \Deimos\Router\Router();
+
+        $router->setRoutes($config);
+
+        $this->request->setRouter($router);
 
     }
 

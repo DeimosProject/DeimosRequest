@@ -7,13 +7,13 @@ namespace Deimos\Request\Adapter;
  *
  * @package Deimos\Request\Adapter
  *
- * @method int requestInt(string $path = null, mixed $default = null, bool $strip = true)
- * @method float requestFloat(string $path = null, mixed $default = null, bool $strip = true)
- * @method bool requestBool(string $path = null, mixed $default = null, bool $strip = true)
- * @method string requestEmail(string $path = null, mixed $default = null, bool $strip = true)
- * @method string requestIP(string $path = null, mixed $default = null, bool $strip = true)
- * @method string requestURL(string $path = null, mixed $default = null, bool $strip = true)
- * @method mixed requestUnsafe(string $path = null, mixed $default = null)
+ * @method int requestInt(string $path = null, mixed $default = 0, bool $strip = true)
+ * @method float requestFloat(string $path = null, mixed $default = 0.0, bool $strip = true)
+ * @method bool requestBool(string $path = null, mixed $default = false, bool $strip = true)
+ * @method string requestEmail(string $path = null, mixed $default = '', bool $strip = true)
+ * @method string requestIP(string $path = null, mixed $default = '', bool $strip = true)
+ * @method string requestURL(string $path = null, mixed $default = '', bool $strip = true)
+ * @method mixed requestUnsafe(string $path = null, mixed $default = '')
  */
 trait Request
 {

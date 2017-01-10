@@ -12,4 +12,16 @@ return [
         'action'     => 'default',
     ]],
 
+    'admin2' => [['/demo(/<controller>(/<action>(/<id>)))', [
+        'id' => '\w+'
+    ]], [
+        'controller' => 'cms',
+        'action'     => 'default',
+    ]],
+
+    'default' => ['/(<controller>(/<action>(/<value>)))', [
+        'controller' => 'deimos',
+        'action'     => 'index',
+    ]],
+
 ];

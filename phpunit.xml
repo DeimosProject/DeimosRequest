@@ -20,4 +20,17 @@
         <log type="coverage-clover" target="./build/logs/clover.xml"/>
     </logging>
 
+    <php>
+        <post name="postFoo" value="postBar"/>
+        <post name="postTestInt" value="postBar"/>
+        <get name="getFoo" value="getBar"/>
+        <get name="getTestInt" value="123"/>
+        <get name="getTestIntDefault" value="123s"/>
+        <request name="requestFooPath1" value="/admin/path"/>
+        <server name="REQUEST_URI" value="/admin/path/1?test=1"/>
+        <server name="REQUEST_METHOD" value="GET"/>
+        <server name="HTTP_HOST" value="unit-test"/>
+        <server name="serverFoo" value="serverBar"/>
+    </php>
+
 </phpunit>
