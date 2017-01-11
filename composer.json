@@ -8,7 +8,7 @@
     }
   ],
   "require": {
-    "deimos/helper": "~0.2"
+    "deimos/helper": "~0.3"
   },
   "require-dev": {
     "deimos/router": "~0.0",
