@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Trait Deimos\Request\RequestExtension</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-Deimos.html">
+						Deimos<span></span>
+					</a>
+
+						<ul>
+				<li class="active">
+					<a href="namespace-Deimos.Request.html">
+						Request<span></span>
+					</a>
+
+						<ul>
+				<li>
+					<a href="namespace-Deimos.Request.Adapter.html">
+						Adapter					</a>
+
+						</li>
+							</ul></li></ul></li>
+				<li>
+					<a href="namespace-PHP.html">
+						PHP					</a>
+
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Deimos.Request.Request.html">Request</a></li>
+			</ul>
+
+
+			<h3>Traits</h3>
+			<ul>
+				<li><a href="class-Deimos.Request.AdapterExtension.html">AdapterExtension</a></li>
+				<li><a href="class-Deimos.Request.DefaultAdapter.html">DefaultAdapter</a></li>
+				<li class="active"><a href="class-Deimos.Request.RequestExtension.html">RequestExtension</a></li>
+			</ul>
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Deimos.Request.html" title="Summary of Deimos\Request"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+				<li>
+					<a href="annotation-group-deprecated.html" title="List of elements with deprecated annotation">
+						<span>Deprecated</span>
+					</a>
+				</li>
+				<li>
+					<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+						<span>Todo</span>
+					</a>
+				</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Trait RequestExtension</h1>
+
+
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>Deimos\Request\RequestExtension</span></b>			
+			
+			 uses 
+					<a href="class-Deimos.Request.Adapter.Request.html"><span>Deimos\Request\Adapter\Request</span></a>, 
+			
+					<a href="class-Deimos.Request.Adapter.Server.html"><span>Deimos\Request\Adapter\Server</span></a>, 
+			
+					<a href="class-Deimos.Request.Adapter.Router.html"><span>Deimos\Request\Adapter\Router</span></a>, 
+			
+					<a href="class-Deimos.Request.Adapter.Query.html"><span>Deimos\Request\Adapter\Query</span></a>, 
+			
+					<a href="class-Deimos.Request.Adapter.Other.html"><span>Deimos\Request\Adapter\Other</span></a>, 
+			
+					<a href="class-Deimos.Request.Adapter.Data.html"><span>Deimos\Request\Adapter\Data</span></a>
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+	<div>
+		<h4>Direct Known Users</h4>
+			<a href="class-Deimos.Request.Request.html">Deimos\Request\Request</a>
+	</div>
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Deimos.html">Deimos</a>\<a href="namespace-Deimos.Request.html">Request</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-Deimos.Request.RequestExtension.html#5-188" title="Go to source code">RequestExtension.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="url" id="_url">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_url">#</a>
+		<code><a href="source-class-Deimos.Request.RequestExtension.html#15-28" title="Go to source code">url</a>( <span>boolean <var>$withParams</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>Gets request URL</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets request URL</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$withParams</var></dt>
+					<dd>Whether to preserve URL parameters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>URL of this request
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="urlPath" id="_urlPath">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed|string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_urlPath">#</a>
+		<code><a href="source-class-Deimos.Request.RequestExtension.html#30-51" title="Go to source code">urlPath</a>( <span>boolean <var>$withParams</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			<p>without host &amp; schema</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>without host &amp; schema</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$withParams</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed|string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isHttps" id="_isHttps">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isHttps">#</a>
+		<code><a href="source-class-Deimos.Request.RequestExtension.html#53-61" title="Go to source code">isHttps</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="queryString" id="_queryString">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_queryString">#</a>
+		<code><a href="source-class-Deimos.Request.RequestExtension.html#63-85" title="Go to source code">queryString</a>( <span>string|null <var>$url</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$url</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="json" id="_json">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_json">#</a>
+		<code><a href="source-class-Deimos.Request.RequestExtension.html#87-117" title="Go to source code">json</a>( <span>array <var>$data</var> = <span class="php-keyword1">array</span>()</span>, <span>integer|array <var>$options</var> = JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE</span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd></dd>
+					<dt><var>$options</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isAjax" id="_isAjax">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isAjax">#</a>
+		<code><a href="source-class-Deimos.Request.RequestExtension.html#119-130" title="Go to source code">isAjax</a>( )</code>
+
+		<div class="description short">
+			<p>Check if the request is ajax</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Check if the request is ajax</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isDelete" id="_isDelete">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isDelete">#</a>
+		<code><a href="source-class-Deimos.Request.RequestExtension.html#132-138" title="Go to source code">isDelete</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="method" id="_method">
+
+		<td class="attributes"><code>
+			 public 
+
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_method">#</a>
+		<code><a href="source-class-Deimos.Request.RequestExtension.html#140-146" title="Go to source code">method</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					string
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isHead" id="_isHead">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isHead">#</a>
+		<code><a href="source-class-Deimos.Request.RequestExtension.html#148-154" title="Go to source code">isHead</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isPut" id="_isPut">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isPut">#</a>
+		<code><a href="source-class-Deimos.Request.RequestExtension.html#156-162" title="Go to source code">isPut</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isPatch" id="_isPatch">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isPatch">#</a>
+		<code><a href="source-class-Deimos.Request.RequestExtension.html#164-170" title="Go to source code">isPatch</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isPost" id="_isPost">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isPost">#</a>
+		<code><a href="source-class-Deimos.Request.RequestExtension.html#172-178" title="Go to source code">isPost</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isGet" id="_isGet">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isGet">#</a>
+		<code><a href="source-class-Deimos.Request.RequestExtension.html#180-186" title="Go to source code">isGet</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+	<table class="summary used">
+	<caption>Methods used from <a href="class-Deimos.Request.Adapter.Request.html#methods">Deimos\Request\Adapter\Request</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Deimos.Request.Adapter.Request.html#_request">request()</a>, 
+			<a href="class-Deimos.Request.Adapter.Request.html#_requestRequired">requestRequired()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary used">
+	<caption>Methods used from <a href="class-Deimos.Request.Adapter.Server.html#methods">Deimos\Request\Adapter\Server</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Deimos.Request.Adapter.Server.html#_server">server()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary used">
+	<caption>Methods used from <a href="class-Deimos.Request.Adapter.Router.html#methods">Deimos\Request\Adapter\Router</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Deimos.Request.Adapter.Router.html#_attribute">attribute()</a>, 
+			<a href="class-Deimos.Request.Adapter.Router.html#_attributeRequired">attributeRequired()</a>, 
+			<a href="class-Deimos.Request.Adapter.Router.html#_attributes">attributes()</a>, 
+			<a href="class-Deimos.Request.Adapter.Router.html#_setRouter">setRouter()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary used">
+	<caption>Methods used from <a href="class-Deimos.Request.Adapter.Query.html#methods">Deimos\Request\Adapter\Query</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Deimos.Request.Adapter.Query.html#_get">get()</a>, 
+			<a href="class-Deimos.Request.Adapter.Query.html#_getRequired">getRequired()</a>, 
+			<a href="class-Deimos.Request.Adapter.Query.html#_query">query()</a>, 
+			<a href="class-Deimos.Request.Adapter.Query.html#_queryRequired">queryRequired()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary used">
+	<caption>Methods used from <a href="class-Deimos.Request.Adapter.Other.html#methods">Deimos\Request\Adapter\Other</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Deimos.Request.Adapter.Other.html#_delete">delete()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#_deleteRequired">deleteRequired()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#_patch">patch()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#_patchRequired">patchRequired()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#_put">put()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#_putRequired">putRequired()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary used">
+	<caption>Methods used from <a href="class-Deimos.Request.Adapter.Data.html#methods">Deimos\Request\Adapter\Data</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Deimos.Request.Adapter.Data.html#_data">data()</a>, 
+			<a href="class-Deimos.Request.Adapter.Data.html#_dataRequired">dataRequired()</a>, 
+			<a href="class-Deimos.Request.Adapter.Data.html#_post">post()</a>, 
+			<a href="class-Deimos.Request.Adapter.Data.html#_postRequired">postRequired()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+	<table class="summary used">
+	<caption>Magic methods used from <a href="class-Deimos.Request.Adapter.Request.html#methods">Deimos\Request\Adapter\Request</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Deimos.Request.Adapter.Request.html#m_requestBool">requestBool()</a>, 
+			<a href="class-Deimos.Request.Adapter.Request.html#m_requestEmail">requestEmail()</a>, 
+			<a href="class-Deimos.Request.Adapter.Request.html#m_requestFloat">requestFloat()</a>, 
+			<a href="class-Deimos.Request.Adapter.Request.html#m_requestIP">requestIP()</a>, 
+			<a href="class-Deimos.Request.Adapter.Request.html#m_requestInt">requestInt()</a>, 
+			<a href="class-Deimos.Request.Adapter.Request.html#m_requestURL">requestURL()</a>, 
+			<a href="class-Deimos.Request.Adapter.Request.html#m_requestUnsafe">requestUnsafe()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary used">
+	<caption>Magic methods used from <a href="class-Deimos.Request.Adapter.Router.html#methods">Deimos\Request\Adapter\Router</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Deimos.Request.Adapter.Router.html#m_attributeBool">attributeBool()</a>, 
+			<a href="class-Deimos.Request.Adapter.Router.html#m_attributeEmail">attributeEmail()</a>, 
+			<a href="class-Deimos.Request.Adapter.Router.html#m_attributeFloat">attributeFloat()</a>, 
+			<a href="class-Deimos.Request.Adapter.Router.html#m_attributeIP">attributeIP()</a>, 
+			<a href="class-Deimos.Request.Adapter.Router.html#m_attributeInt">attributeInt()</a>, 
+			<a href="class-Deimos.Request.Adapter.Router.html#m_attributeURL">attributeURL()</a>, 
+			<a href="class-Deimos.Request.Adapter.Router.html#m_attributeUnsafe">attributeUnsafe()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary used">
+	<caption>Magic methods used from <a href="class-Deimos.Request.Adapter.Query.html#methods">Deimos\Request\Adapter\Query</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Deimos.Request.Adapter.Query.html#m_getBool">getBool()</a>, 
+			<a href="class-Deimos.Request.Adapter.Query.html#m_getEmail">getEmail()</a>, 
+			<a href="class-Deimos.Request.Adapter.Query.html#m_getFloat">getFloat()</a>, 
+			<a href="class-Deimos.Request.Adapter.Query.html#m_getIP">getIP()</a>, 
+			<a href="class-Deimos.Request.Adapter.Query.html#m_getInt">getInt()</a>, 
+			<a href="class-Deimos.Request.Adapter.Query.html#m_getURL">getURL()</a>, 
+			<a href="class-Deimos.Request.Adapter.Query.html#m_getUnsafe">getUnsafe()</a>, 
+			<a href="class-Deimos.Request.Adapter.Query.html#m_queryBool">queryBool()</a>, 
+			<a href="class-Deimos.Request.Adapter.Query.html#m_queryEmail">queryEmail()</a>, 
+			<a href="class-Deimos.Request.Adapter.Query.html#m_queryFloat">queryFloat()</a>, 
+			<a href="class-Deimos.Request.Adapter.Query.html#m_queryIP">queryIP()</a>, 
+			<a href="class-Deimos.Request.Adapter.Query.html#m_queryInt">queryInt()</a>, 
+			<a href="class-Deimos.Request.Adapter.Query.html#m_queryURL">queryURL()</a>, 
+			<a href="class-Deimos.Request.Adapter.Query.html#m_queryUnsafe">queryUnsafe()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary used">
+	<caption>Magic methods used from <a href="class-Deimos.Request.Adapter.Other.html#methods">Deimos\Request\Adapter\Other</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Deimos.Request.Adapter.Other.html#m_deleteBool">deleteBool()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#m_deleteEmail">deleteEmail()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#m_deleteFloat">deleteFloat()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#m_deleteIP">deleteIP()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#m_deleteInt">deleteInt()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#m_deleteURL">deleteURL()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#m_deleteUnsafe">deleteUnsafe()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#m_patchBool">patchBool()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#m_patchEmail">patchEmail()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#m_patchFloat">patchFloat()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#m_patchIP">patchIP()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#m_patchInt">patchInt()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#m_patchURL">patchURL()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#m_pathUnsafe">pathUnsafe()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#m_putBool">putBool()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#m_putEmail">putEmail()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#m_putFloat">putFloat()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#m_putIP">putIP()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#m_putInt">putInt()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#m_putURL">putURL()</a>, 
+			<a href="class-Deimos.Request.Adapter.Other.html#m_putUnsafe">putUnsafe()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary used">
+	<caption>Magic methods used from <a href="class-Deimos.Request.Adapter.Data.html#methods">Deimos\Request\Adapter\Data</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Deimos.Request.Adapter.Data.html#m_dataBool">dataBool()</a>, 
+			<a href="class-Deimos.Request.Adapter.Data.html#m_dataEmail">dataEmail()</a>, 
+			<a href="class-Deimos.Request.Adapter.Data.html#m_dataFloat">dataFloat()</a>, 
+			<a href="class-Deimos.Request.Adapter.Data.html#m_dataIP">dataIP()</a>, 
+			<a href="class-Deimos.Request.Adapter.Data.html#m_dataInt">dataInt()</a>, 
+			<a href="class-Deimos.Request.Adapter.Data.html#m_dataURL">dataURL()</a>, 
+			<a href="class-Deimos.Request.Adapter.Data.html#m_dataUnsafe">dataUnsafe()</a>, 
+			<a href="class-Deimos.Request.Adapter.Data.html#m_postBool">postBool()</a>, 
+			<a href="class-Deimos.Request.Adapter.Data.html#m_postEmail">postEmail()</a>, 
+			<a href="class-Deimos.Request.Adapter.Data.html#m_postFloat">postFloat()</a>, 
+			<a href="class-Deimos.Request.Adapter.Data.html#m_postIP">postIP()</a>, 
+			<a href="class-Deimos.Request.Adapter.Data.html#m_postInt">postInt()</a>, 
+			<a href="class-Deimos.Request.Adapter.Data.html#m_postURL">postURL()</a>, 
+			<a href="class-Deimos.Request.Adapter.Data.html#m_postUnsafe">postUnsafe()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
