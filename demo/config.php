@@ -2,12 +2,12 @@
 
 return [
 
-    'deimos' => ['/demo/deimos', [
+    'deimos' => ['/demo/deimos/', [
         'controller' => 'deimos',
         'action'     => 'request',
     ]],
 
-    'admin' => ['/demo(/<controller>(/<action>(/<id:\d+>)))', [
+    'admin' => ['/demo/(<controller>/(<action>/(<id:\d+>)))', [
         'controller' => 'cms',
         'action'     => 'default',
     ]],

@@ -41,6 +41,8 @@ trait Router
      * @param mixed  $default
      *
      * @return mixed
+     *
+     * @throws \InvalidArgumentException
      */
     public function attribute($path = null, $default = null)
     {
@@ -51,6 +53,8 @@ trait Router
 
     /**
      * @return array
+     *
+     * @throws \InvalidArgumentException
      */
     public function attributes()
     {
@@ -59,6 +63,8 @@ trait Router
 
     /**
      * @return \Deimos\Router\Route
+     *
+     * @throws \InvalidArgumentException
      */
     private function route()
     {
@@ -80,6 +86,7 @@ trait Router
      * @return mixed
      *
      * @throws \Deimos\Helper\Exceptions\ExceptionEmpty
+     * @throws \InvalidArgumentException
      */
     public function attributeRequired($path = null, $strip = true)
     {
