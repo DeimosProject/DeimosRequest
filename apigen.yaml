@@ -1,5 +1,5 @@
 source:
-  - ./src/Request
+  - ./src
 destination: ./docs
 internal: yes
 php: no
