@@ -2,26 +2,56 @@
 
 return [
 
-    'deimos' => ['/demo/deimos', [
-        'controller' => 'deimos',
-        'action'     => 'request',
-    ]],
+    'deimos' => [
+        'type' => 'pattern',
+        'path' => '/demo/deimos',
 
-    'admin' => ['/demo(/<controller>(/<action>(/<id:\d+>)))', [
-        'controller' => 'cms',
-        'action'     => 'default',
-    ]],
+        'defaults' => [
+            'controller' => 'deimos',
+            'action'     => 'request',
+        ]
+    ],
 
-    'admin2' => [['/demo(/<controller>(/<action>(/<id>)))', [
-        'id' => '\w+'
-    ]], [
-        'controller' => 'cms',
-        'action'     => 'default',
-    ]],
+    'demo' => [
+        'type' => 'prefix',
+        'path' => '/demo',
 
-    'default' => ['/(<controller>(/<action>(/<value>)))', [
-        'controller' => 'deimos',
-        'action'     => 'index',
-    ]],
+        'resolver' => [
+            'admin' => [
+                'type' => 'pattern',
+                'path' => '(/<controller>(/<action>(/<id:\d+>)))',
+
+                'defaults' => [
+                    'controller' => 'cms',
+                    'action'     => 'default',
+                ]
+            ],
+
+            'admin2' => [
+                'type' => 'pattern',
+                'path' => [
+                    '(/<controller>(/<action>(/<id>)))',
+                    [
+                        'id' => '\w+'
+                    ]
+                ],
+
+                'defaults' => [
+                    'controller' => 'cms',
+                    'action'     => 'default',
+                ]
+            ],
+        ]
+    ],
+
+    'default' => [
+        'type' => 'pattern',
+        'path' => '/(<controller>(/<action>(/<value>)))',
+
+        'defaults' => [
+            'controller' => 'deimos',
+            'action'     => 'index',
+        ]
+    ],
 
 ];
