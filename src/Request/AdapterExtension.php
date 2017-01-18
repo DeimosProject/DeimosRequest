@@ -16,6 +16,7 @@ trait AdapterExtension
         'put'       => true,
         'patch'     => true,
         'delete'    => true,
+        'request'   => true,
     ];
 
     /**
