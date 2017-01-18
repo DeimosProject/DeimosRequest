@@ -60,7 +60,7 @@ trait AdapterExtension
 
         if (empty($this->allowMethods[$call]))
         {
-            throw new \BadFunctionCallException('Not found' . $name);
+            throw new \BadFunctionCallException('Not found `' . $name . '`');
         }
 
         if ($filter === 'unsafe')
