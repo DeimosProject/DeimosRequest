@@ -46,8 +46,6 @@ trait Router
      */
     public function attribute($path = null, $default = null)
     {
-        $path = $this->normalizeLow($path);
-
         return $this->arrGet($this->attributes(), $path, $default);
     }
 
