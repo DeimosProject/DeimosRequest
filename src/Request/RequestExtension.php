@@ -87,6 +87,8 @@ trait RequestExtension
     /**
      * @param array     $data
      * @param int|array $options
+     *
+     * @return string
      */
     public function json(array $data = array(), $options = JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
     {
@@ -98,21 +100,13 @@ trait RequestExtension
             header('Content-type: application/json; charset=utf-8');
         }
 
-        if (is_array($options))
-        {
-            $this->helper->json()->reset();
+        /**
+         * @var \Deimos\Helper\Helpers\Json $json
+         */
+        $json = $this->helper->json();
+        $json->setOption((array)$options);
 
-            foreach ($options as $option)
-            {
-                $this->helper->json()->addOption($option);
-            }
-        }
-        else
-        {
-            $this->helper->json()->setOption($options);
-        }
-
-        return $this->helper->json()->encode($data);
+        return $json->encode($data);
 
     }
 

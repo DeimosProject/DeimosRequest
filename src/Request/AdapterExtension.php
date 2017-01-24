@@ -44,6 +44,47 @@ trait AdapterExtension
     ];
 
     /**
+     * @param $call
+     * @param $name
+     *
+     * @throws \BadFunctionCallException
+     */
+    private function allowMethods($call, $name)
+    {
+        if (empty($this->allowMethods[$call]))
+        {
+            throw new \BadFunctionCallException('Not found `' . $name . '`');
+        }
+    }
+
+    /**
+     * @param $call
+     * @param $arguments
+     *
+     * @return mixed
+     */
+    private function unsafeFilter($call, $arguments)
+    {
+        $arguments[1] = isset($arguments[1]) ? $arguments[1] : null;
+        $arguments[2] = false;
+
+        return call_user_func_array([$this, $call], $arguments);
+    }
+
+    /**
+     * @param $name
+     *
+     * @return array
+     */
+    private function parameterInit($name)
+    {
+        $parameters = preg_replace('~([A-Z])~', '_$1', $name, 1);
+        $parameters = $this->normalizeLow($parameters);
+
+        return explode('_', $parameters);
+    }
+
+    /**
      * @param $name
      * @param $arguments
      *
@@ -53,22 +94,13 @@ trait AdapterExtension
      */
     public function __call($name, $arguments)
     {
-        $parameters = preg_replace('~([A-Z])~', '_$1', $name, 1);
+        list ($call, $filter) = $this->parameterInit($name);
 
-        $parameters = $this->normalizeLow($parameters);
-        list ($call, $filter) = explode('_', $parameters);
-
-        if (empty($this->allowMethods[$call]))
-        {
-            throw new \BadFunctionCallException('Not found `' . $name . '`');
-        }
+        $this->allowMethods($call, $name);
 
         if ($filter === 'unsafe')
         {
-            $arguments[1] = isset($arguments[1]) ? $arguments[1] : null;
-            $arguments[2] = false;
-
-            return call_user_func_array([$this, $call], $arguments);
+            return $this->unsafeFilter($call, $arguments);
         }
 
         return $this->filterVariable(
