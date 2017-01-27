@@ -29,10 +29,12 @@ trait URL
          */
         $helper = $this->helper;
 
+        $string = preg_replace('~[\s\t\n\r]+~', '-', $string);
+
         $string = $helper->str()->low($string);
         $string = $helper->str()->translit($string);
 
-        return preg_replace('~[^a-z0-9-]~', '', $string);
+        return preg_replace('~[^a-z0-9-]+~', '', $string);
     }
 
 
