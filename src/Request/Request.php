@@ -9,6 +9,7 @@ class Request
 
     use AdapterExtension;
     use RequestExtension;
+    use URL;
 
     /**
      * Request constructor.

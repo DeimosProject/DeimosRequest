@@ -62,7 +62,8 @@ trait DefaultAdapter
      */
     protected function normalizeUpp($string)
     {
-        if(null === $string) {
+        if (null === $string)
+        {
 
             return null;
         }
@@ -77,7 +78,8 @@ trait DefaultAdapter
      */
     protected function normalizeLow($string)
     {
-        if(null === $string) {
+        if (null === $string)
+        {
 
             return null;
         }
