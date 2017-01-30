@@ -34,7 +34,7 @@ trait URL
         $string = $helper->str()->low($string);
         $string = $helper->str()->translit($string);
 
-        return preg_replace('~[^a-z0-9-]+~', '', $string);
+        return trim(preg_replace('~[^a-z0-9-]+~', '', $string), '-');
     }
 
 

@@ -80,4 +80,15 @@ class RequestTest extends TestSetUp
         $this->request->requestRequired('requestFooPath');
     }
 
+    public function testFriendlyUrl()
+    {
+        $str = '.   ..Friendly Url!#@ ';
+        $resultStr = 'friendly-url';
+
+        $this->assertEquals(
+            $resultStr,
+            $this->request->friendlyUrl($str)
+        );
+    }
+
 }
