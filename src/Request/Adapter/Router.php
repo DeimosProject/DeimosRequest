@@ -64,7 +64,7 @@ trait Router
      *
      * @throws \InvalidArgumentException
      */
-    private function route()
+    public function route()
     {
         if (!$this->route)
         {
