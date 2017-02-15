@@ -14,6 +14,7 @@ namespace Deimos\Request\Adapter;
  * @method string requestIP(string $path = null, mixed $default = '', bool $strip = true)
  * @method string requestURL(string $path = null, mixed $default = '', bool $strip = true)
  * @method mixed requestUnsafe(string $path = null, mixed $default = '')
+ * @method double requestBetween(string $path = null, double $min, double $max)
  */
 trait Request
 {

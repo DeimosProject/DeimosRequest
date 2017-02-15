@@ -10,7 +10,7 @@ return [
 
             'deimos' => [
                 'type' => 'pattern',
-                'path' => '/deimos/?',
+                'path' => '/deimos',
 
                 'defaults' => [
                     'controller' => 'deimos',
@@ -20,7 +20,7 @@ return [
 
             'default' => [
                 'type' => 'pattern',
-                'path' => '/(<controller>/(<action>/(<id:\d+>)))/?',
+                'path' => '/(<controller>/(<action>/(<id:\d+>)))',
 
                 'defaults' => [
                     'controller' => 'cms',

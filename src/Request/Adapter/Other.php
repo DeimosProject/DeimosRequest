@@ -14,6 +14,7 @@ namespace Deimos\Request\Adapter;
  * @method string putIP(string $path = null, mixed $default = '', bool $strip = true)
  * @method string putURL(string $path = null, mixed $default = '', bool $strip = true)
  * @method mixed putUnsafe(string $path = null, mixed $default = '')
+ * @method double putBetween(string $path = null, double $min, double $max)
  *
  * @method int patchInt(string $path = null, mixed $default = 0, bool $strip = true)
  * @method float patchFloat(string $path = null, mixed $default = 0.0, bool $strip = true)
@@ -21,7 +22,8 @@ namespace Deimos\Request\Adapter;
  * @method string patchEmail(string $path = null, mixed $default = '', bool $strip = true)
  * @method string patchIP(string $path = null, mixed $default = '', bool $strip = true)
  * @method string patchURL(string $path = null, mixed $default = '', bool $strip = true)
- * @method mixed pathUnsafe(string $path = null, mixed $default = '')
+ * @method mixed patchUnsafe(string $path = null, mixed $default = '')
+ * @method double patchBetween(string $path = null, double $min, double $max)
  *
  * @method int deleteInt(string $path = null, mixed $default = 0, bool $strip = true)
  * @method float deleteFloat(string $path = null, mixed $default = 0.0, bool $strip = true)
@@ -30,6 +32,7 @@ namespace Deimos\Request\Adapter;
  * @method string deleteIP(string $path = null, mixed $default = '', bool $strip = true)
  * @method string deleteURL(string $path = null, mixed $default = '', bool $strip = true)
  * @method mixed deleteUnsafe(string $path = null, mixed $default = '')
+ * @method double deleteBetween(string $path = null, double $min, double $max)
  */
 trait Other
 {

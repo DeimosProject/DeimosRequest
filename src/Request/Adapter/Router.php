@@ -14,6 +14,7 @@ namespace Deimos\Request\Adapter;
  * @method string attributeIP(string $path = null, mixed $default = '')
  * @method string attributeURL(string $path = null, mixed $default = '')
  * @method mixed attributeUnsafe(string $path = null, mixed $default = '')
+ * @method double attributeBetween(string $path = null, double $min, double $max)
  */
 trait Router
 {

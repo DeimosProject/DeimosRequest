@@ -14,6 +14,7 @@ namespace Deimos\Request\Adapter;
  * @method string dataIP(string $path = null, mixed $default = '', bool $strip = true)
  * @method string dataURL(string $path = null, mixed $default = '', bool $strip = true)
  * @method mixed dataUnsafe(string $path = null, mixed $default = '')
+ * @method double dataBetween(string $path = null, double $min, double $max)
  *
  * @method int postInt(string $path = null, mixed $default = 0, bool $strip = true)
  * @method float postFloat(string $path = null, mixed $default = 0.0, bool $strip = true)
@@ -22,6 +23,7 @@ namespace Deimos\Request\Adapter;
  * @method string postIP(string $path = null, mixed $default = '', bool $strip = true)
  * @method string postURL(string $path = null, mixed $default = '', bool $strip = true)
  * @method mixed postUnsafe(string $path = null, mixed $default = '')
+ * @method double postBetween(string $path = null, double $min, double $max)
  */
 trait Data
 {

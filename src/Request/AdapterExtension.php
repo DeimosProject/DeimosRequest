@@ -28,7 +28,7 @@ trait AdapterExtension
         'bool'  => FILTER_VALIDATE_BOOLEAN,
         'email' => FILTER_VALIDATE_EMAIL,
         'ip'    => FILTER_VALIDATE_IP,
-        'url'   => FILTER_VALIDATE_URL,
+        'url'   => FILTER_VALIDATE_URL
     ];
 
     /**
@@ -72,6 +72,34 @@ trait AdapterExtension
     }
 
     /**
+     * @param $call
+     * @param $arguments
+     *
+     * @return mixed
+     */
+    private function betweenFilter($call, $arguments)
+    {
+        $num = $this->unsafeFilter($call, $arguments);
+
+        if (is_numeric($num))
+        {
+            if ($arguments[2] <= $num)
+            {
+                return $arguments[2];
+            }
+
+            if ($arguments[1] >= $num)
+            {
+                return $arguments[1];
+            }
+
+            return $num;
+        }
+
+        return null;
+    }
+
+    /**
      * @param $name
      *
      * @return array
@@ -98,16 +126,21 @@ trait AdapterExtension
 
         $this->allowMethods($call, $name);
 
-        if ($filter === 'unsafe')
+        switch ($filter)
         {
-            return $this->unsafeFilter($call, $arguments);
-        }
+            case 'unsafe':
+                return $this->unsafeFilter($call, $arguments);
 
-        return $this->filterVariable(
-            call_user_func_array([$this, $call], $arguments),
-            $this->filters[$filter],
-            $this->defaults[$filter]
-        );
+            case 'between':
+                return $this->betweenFilter($call, $arguments);
+
+            default:
+                return $this->filterVariable(
+                    call_user_func_array([$this, $call], $arguments),
+                    $this->filters[$filter],
+                    $this->defaults[$filter]
+                );
+        }
     }
 
 }
