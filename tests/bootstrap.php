@@ -9,7 +9,14 @@ $loader->addPsr4('DeimosTest\\', 'tests/src/');
 
 if (class_exists('PHPUnit\\Framework\\TestCase'))
 {
-    class PHPUnit_Framework_TestCase extends \PHPUnit\Framework\TestCase
+    class TestCase extends \PHPUnit\Framework\TestCase
+    {
+
+    }
+}
+else
+{
+    class TestCase extends \PHPUnit_Framework_TestCase
     {
 
     }
