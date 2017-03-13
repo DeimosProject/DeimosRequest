@@ -13,8 +13,11 @@ trait URL
     public function isHttps()
     {
         $https = $this->server('https');
-
-        return $this->filterVariable($https, FILTER_VALIDATE_BOOLEAN, false);
+        $httpX = $this->server('http_x_forwarded_proto');
+        
+        return 
+            $this->filterVariable($https, FILTER_VALIDATE_BOOLEAN, false) ||
+            $this->filterVariable($httpX, FILTER_VALIDATE_BOOLEAN, false);
     }
 
     /**
