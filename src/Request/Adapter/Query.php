@@ -15,15 +15,6 @@ namespace Deimos\Request\Adapter;
  * @method string queryURL(string $path = null, mixed $default = '', bool $strip = true)
  * @method mixed queryUnsafe(string $path = null, mixed $default = '')
  * @method double queryBetween(string $path = null, double $min, double $max)
- *
- * @method int getInt(string $path = null, mixed $default = 0, bool $strip = true)
- * @method float getFloat(string $path = null, mixed $default = 0.0, bool $strip = true)
- * @method bool getBool(string $path = null, mixed $default = false, bool $strip = true)
- * @method string getEmail(string $path = null, mixed $default = '', bool $strip = true)
- * @method string getIP(string $path = null, mixed $default = '', bool $strip = true)
- * @method string getURL(string $path = null, mixed $default = '', bool $strip = true)
- * @method mixed getUnsafe(string $path = null, mixed $default = '')
- * @method double getBetween(string $path = null, double $min, double $max)
  */
 trait Query
 {
@@ -32,18 +23,6 @@ trait Query
      * @var array
      */
     private $queryData;
-
-    /**
-     * @param string $path
-     * @param mixed  $default
-     * @param bool   $strip
-     *
-     * @return mixed
-     */
-    public function get($path = null, $default = null, $strip = true)
-    {
-        return $this->query($path, $default, $strip);
-    }
 
     /**
      * @param string $path
@@ -68,19 +47,6 @@ trait Query
         }
 
         return $this->queryData;
-    }
-
-    /**
-     * @param string $path
-     * @param bool   $strip
-     *
-     * @return mixed
-     *
-     * @throws \Deimos\Helper\Exceptions\ExceptionEmpty
-     */
-    public function getRequired($path = null, $strip = true)
-    {
-        return $this->queryRequired($path, $strip);
     }
 
     /**

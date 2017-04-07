@@ -18,9 +18,4 @@ class Request extends \Deimos\Request\Request
         }
     }
 
-    protected function getInput()
-    {
-        return array_merge($_REQUEST, parent::getInput());
-    }
-
 }

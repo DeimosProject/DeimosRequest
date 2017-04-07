@@ -22,12 +22,12 @@ trait Router
     /**
      * @var \Deimos\Router\Router
      */
-    private $router;
+    protected $router;
 
     /**
      * @var \Deimos\Router\Route
      */
-    private $route;
+    protected $route;
 
     /**
      * @param \Deimos\Router\Router $router
@@ -43,7 +43,7 @@ trait Router
      *
      * @return mixed
      *
-     * @throws \InvalidArgumentException
+     * @throws \Deimos\Router\Exceptions\NotFound
      */
     public function attribute($path = null, $default = null)
     {
@@ -53,26 +53,25 @@ trait Router
     /**
      * @return array
      *
-     * @throws \InvalidArgumentException
+     * @throws \Deimos\Router\Exceptions\NotFound
      */
     public function attributes()
     {
-        return $this->route()->attributes();
+        return $this->route()->getAttributes();
     }
 
     /**
      * @return \Deimos\Router\Route
      *
-     * @throws \InvalidArgumentException
+     * @return \Deimos\Router\Route
+     * @throws \Deimos\Router\Exceptions\NotFound
      */
     public function route()
     {
         if (!$this->route)
         {
-            $path = $this->urlPath();
-            $this->router->setMethod($this->method());
-
-            $this->route = $this->router->getCurrentRoute($path);
+            $this->route = $this->router
+                ->getRoute($this->urlPath(), $this->domain(), $this->scheme());
         }
 
         return $this->route;

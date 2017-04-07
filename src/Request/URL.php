@@ -12,9 +12,15 @@ trait URL
      */
     public function isHttps()
     {
+        if (class_exists('\Deimos\Router\Router'))
+        {
+            // with cloudFlare
+            return \Deimos\Router\scheme() === 'https';
+        }
+
         $https = $this->server('https');
         $httpX = $this->server('http_x_forwarded_proto');
-        
+
         return 
             $this->filterVariable($https, FILTER_VALIDATE_BOOLEAN, false) ||
             $this->filterVariable($httpX, FILTER_VALIDATE_BOOLEAN, false);
@@ -40,6 +46,21 @@ trait URL
         return trim(preg_replace('~[^a-z0-9-]+~', '', $string), '-');
     }
 
+    /**
+     * @return string
+     */
+    public function scheme()
+    {
+        return $this->isHttps() ? 'https' : 'http';
+    }
+
+    /**
+     * @return string
+     */
+    public function domain()
+    {
+        return $this->server('http_host');
+    }
 
     /**
      * Gets request URL
@@ -50,8 +71,8 @@ trait URL
      */
     public function url($withParams = false)
     {
-        $url = $this->isHttps() ? 'https://' : 'http://';
-        $url .= $this->server('http_host');
+        $url = $this->scheme() . '://';
+        $url .= $this->domain();
 
         return $url . $this->urlPath($withParams);
     }
@@ -61,7 +82,7 @@ trait URL
      *
      * @param bool $withParams
      *
-     * @return mixed|string
+     * @return string
      */
     public function urlPath($withParams = false)
     {

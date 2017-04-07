@@ -11,7 +11,7 @@ class DataTest extends TestSetUp
     {
         $this->assertEquals(
             $_POST['postFoo'],
-            $this->request->post('postFoo')
+            $this->request->data('postFoo')
         );
     }
 
@@ -19,12 +19,12 @@ class DataTest extends TestSetUp
     {
         $this->assertEquals(
             $_POST['postUnsafe'],
-            $this->request->postUnsafe('postUnsafe')
+            $this->request->dataUnsafe('postUnsafe')
         );
 
         $this->assertNotEquals(
             $_POST['postUnsafe'],
-            $this->request->post('postUnsafe')
+            $this->request->data('postUnsafe')
         );
     }
 
@@ -33,12 +33,12 @@ class DataTest extends TestSetUp
      */
     public function testPostRequired()
     {
-        $this->request->postRequired('missing');
+        $this->request->dataRequired('missing');
     }
 
     public function testPostArray()
     {
-        $data = $this->request->postRequired('postArray');
+        $data = $this->request->dataRequired('postArray');
 
         $this->assertEquals('testA', $data['a']);
     }
