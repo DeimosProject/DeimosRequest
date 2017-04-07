@@ -11,7 +11,6 @@ trait DefaultAdapter
      * @var \Deimos\Helper\Helper
      */
     protected $helper;
-    private   $input = 'php://input';
 
     /**
      * @param string $type
@@ -21,38 +20,6 @@ trait DefaultAdapter
     protected function inputArray($type)
     {
         return filter_input_array($type, FILTER_UNSAFE_RAW) ?: [];
-    }
-
-    /**
-     * @return array
-     */
-    protected function getInput()
-    {
-        $contents = $this->getContents($this->input);
-
-        return $this->parseStr($contents);
-    }
-
-    /**
-     * @param string $data
-     *
-     * @return string
-     */
-    private function getContents($data)
-    {
-        return file_get_contents($data);
-    }
-
-    /**
-     * @param string $data
-     *
-     * @return array
-     */
-    private function parseStr($data)
-    {
-        parse_str($data, $output);
-
-        return $output;
     }
 
     /**

@@ -11,7 +11,7 @@
     "deimos/helper": "~1.0"
   },
   "require-dev": {
-    "deimos/router": "~0.0",
+    "deimos/router": "~1.0",
     "phpunit/phpunit": "5.7.5"
   },
   "autoload": {

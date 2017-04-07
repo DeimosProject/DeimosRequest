@@ -4,6 +4,7 @@ namespace DeimosTest;
 
 use Deimos\Builder\Builder;
 use Deimos\Helper\Helper;
+use Deimos\Slice\Slice;
 
 class TestSetUp extends \TestCase
 {
@@ -47,11 +48,8 @@ class TestSetUp extends \TestCase
 
         $this->request = new \DeimosTest\Request($this->helper);
 
-        $config = $this->getConfig();
-
-        $router = new \Deimos\Router\Router();
-
-        $router->setRoutes($config);
+        $slice  = new Slice($this->helper, $this->getConfig());
+        $router = new \Deimos\Router\Router($slice);
 
         $this->request->setRouter($router);
 

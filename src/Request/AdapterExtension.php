@@ -9,14 +9,8 @@ trait AdapterExtension
 
     private $allowMethods = [
         'attribute' => true,
-        'get'       => true,
         'query'     => true,
-        'post'      => true,
         'data'      => true,
-        'put'       => true,
-        'patch'     => true,
-        'delete'    => true,
-        'request'   => true,
     ];
 
     /**

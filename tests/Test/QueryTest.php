@@ -9,13 +9,13 @@ class QueryTest extends TestSetUp
 
     public function testGet()
     {
-        $this->assertNull($this->request->get('test'));
+        $this->assertNull($this->request->query('test'));
     }
 
     public function testQueryInt()
     {
-        $this->assertEquals('123', $this->request->getInt('getTestInt'));
-        $this->assertEquals(0, $this->request->getInt('getTestIntDefault'));
+        $this->assertEquals('123', $this->request->queryInt('getTestInt'));
+        $this->assertEquals(0, $this->request->queryInt('getTestIntDefault'));
     }
 
     /**
@@ -23,7 +23,7 @@ class QueryTest extends TestSetUp
      */
     public function testGerRequiredError()
     {
-        $this->request->getRequired('testMissed');
+        $this->request->queryRequired('testMissed');
     }
 
 }

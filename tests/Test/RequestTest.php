@@ -65,21 +65,6 @@ class RequestTest extends TestSetUp
         );
     }
 
-    public function testRequest()
-    {
-        $request = $this->request->request('requestFooPath1');
-
-        $this->assertEquals($request, $_REQUEST['requestFooPath1']);
-    }
-
-    /**
-     * @expectedException \Deimos\Helper\Exceptions\ExceptionEmpty
-     */
-    public function testRequestRequired()
-    {
-        $this->request->requestRequired('requestFooPath');
-    }
-
     public function testFriendlyUrl()
     {
         $str = '.   ..Friendly Url!#@ ';
