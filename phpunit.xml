@@ -25,6 +25,8 @@
         <post name="postTestInt" value="postBar"/>
         <get name="getFoo" value="getBar"/>
         <get name="getTestInt" value="123"/>
+        <get name="first" value="a"/>
+        <get name="last" value="z"/>
         <get name="getTestIntDefault" value="123s"/>
         <request name="requestFooPath1" value="/admin/path"/>
         <server name="REQUEST_URI" value="/admin/path/1?test=1"/>

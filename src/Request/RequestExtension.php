@@ -29,7 +29,7 @@ trait RequestExtension
         /**
          * @var \Deimos\Helper\Helpers\Json $json
          */
-        $json = $this->helper->json();
+        $json = clone $this->helper->json();
         $json->setOption((array)$options);
 
         return $json->encode($data);
