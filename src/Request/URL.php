@@ -8,11 +8,13 @@ trait URL
 {
 
     /**
+     * @param bool $useRouter
+     *
      * @return bool
      */
-    public function isHttps()
+    public function isHttps($useRouter = true)
     {
-        if (class_exists('\Deimos\Router\Router'))
+        if ($useRouter && class_exists('\Deimos\Router\Router'))
         {
             // with cloudFlare
             return \Deimos\Router\scheme() === 'https';

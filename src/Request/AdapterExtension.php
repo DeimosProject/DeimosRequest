@@ -75,22 +75,7 @@ trait AdapterExtension
     {
         $num = $this->unsafeFilter($call, $arguments);
 
-        if (is_numeric($num))
-        {
-            if ($arguments[2] <= $num)
-            {
-                return $arguments[2];
-            }
-
-            if ($arguments[1] >= $num)
-            {
-                return $arguments[1];
-            }
-
-            return $num;
-        }
-
-        return null;
+        return max(min($arguments[2], $num), $arguments[1]);
     }
 
     /**

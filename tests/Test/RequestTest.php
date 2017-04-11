@@ -10,6 +10,7 @@ class RequestTest extends TestSetUp
     public function testIs()
     {
         $this->assertFalse($this->request->isHttps());
+        $this->assertFalse($this->request->isHttps(false));
         $this->assertFalse($this->request->isAjax());
         $this->assertFalse($this->request->isDelete());
         $this->assertFalse($this->request->isHead());
