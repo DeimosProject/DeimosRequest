@@ -70,8 +70,17 @@ trait Router
     {
         if (!$this->route)
         {
-            $this->route = $this->router
-                ->getRoute($this->urlPath(), $this->domain(), $this->scheme());
+            if (php_sapi_name() === 'cli')
+            {
+                global $argv;
+                $this->route = $this->router
+                    ->getRoute($argv[1] ?? null, 'console', 'cli');
+            }
+            else
+            {
+                $this->route = $this->router
+                    ->getRoute($this->urlPath(), $this->domain(), $this->scheme());
+            }
         }
 
         return $this->route;
