@@ -83,32 +83,6 @@ trait AdapterExtension
 
         if (is_numeric($num))
         {
-
-    /**
-     * @param $call
-     * @param $arguments
-     *
-     * @return mixed
-     */
-    private function betweenFilter($call, $arguments)
-    {
-        $num = $this->unsafeFilter($call, $arguments);
-
-        if (is_numeric($num))
-        {
-
-    /**
-     * @param $call
-     * @param $arguments
-     *
-     * @return mixed
-     */
-    private function betweenFilter($call, $arguments)
-    {
-        $num = $this->unsafeFilter($call, $arguments);
-
-        if (is_numeric($num))
-        {
             if (isset($arguments[2]) && $arguments[2] <= $num)
             {
                 return $arguments[2];
@@ -124,7 +98,6 @@ trait AdapterExtension
 
         return null;
     }
-
 
     /**
      * @param $name
